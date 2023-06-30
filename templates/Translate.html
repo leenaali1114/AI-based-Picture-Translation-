@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    
+    <title>Text Translator Tool</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='stylesheets/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='stylesheets/Translate.css') }}" />
+
+</head>
+
+<body>
+
+    <div class="header" id="myHeader">
+        <span class="icon-name"><strong>PicTrans</strong></span>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="sidenav-content">
+                    <a href="/">Home</a>
+                    <a href="/Detect">Text Extraction & Object Detection Tool</a>
+                    <a href="/SpeechREC">Speech Recognition Tool</a>
+                    <a href="/Translate">Text Translation Tool</a>
+                  </div>
+            </div>
+        <span style="font-size:30px; cursor:pointer; float: right;" onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div class="Middle">
+        <main>
+        <h1 class="cover-heading">Text Translation Tool</h1>
+        <p class="lead">The text translator will allow you to translate text from one language to another. 
+            You may enter text and the tool will translate text to another language. 
+            Once translated, you can copy text to your clipboard with one click.</p>
+        
+            <div class="container">
+            <div id="row">
+                <div id="col">
+                    <form method="POST">
+                        <!-- Enter text to translate. -->
+                        <div class="form-group">
+                            <label for="text-to-translate"><strong>Enter the text you'd like to translate:</strong></label>
+                            <textarea class="form-control" name="text-to-translate" id="text-to-translate"
+                                rows="8" placeholder="Enter Text..."></textarea>
+                        </div>
+                        <!-- Select output language here. -->
+                        <div class="form-group">
+                            <label for="select-language"><strong>Translate to:</strong></label>
+                            <select class="form-control select-language" name="select-language" id="select-language">
+                                <option value="en">English</option>
+                                <option value="mr">Marathi</option>
+                                <option value="hi">Hindi</option>
+                                <option value="fr">French</option>
+                                <option value="ta">Tamil</option>
+                                <option value="te">Telugu</option>
+                                <option value="tr">Turkish</option>
+                                <option value="ur">Urdu</option>
+                                <option value="ru">Russian</option>
+                                <option value="pa">Panjabi</option>
+                                <option value="af">Afrikaans</option>
+                                <option value="ar">Arabic</option>
+                                <option value="bn">Bengali</option>
+                                <option value="zh-cn">Chinese(Simplified)</option>
+                                <option value="zh-tw">Chinese(Traditional)</option>
+                                <option value="de">German</option>
+                                <option value="el">Greek</option>
+                                <option value="gu">Gujarati</option>
+                                <option value="iw">Hebrew</option>
+                                <option value="he">Hebrew</option>
+                                <option value="hu">hungarian</option>
+                                <option value="it">Italian</option>
+                                <option value="ja">Japanese</option>
+                                <option value="kn">Kannada</option>
+                                <option value="ko">Korean</option>
+                                <option value="la">Latin</option>
+                                <option value="ml">Malayalam</option>
+                                <option value="ne">Nepali</option>
+                                <option value="or">Odia</option>
+                                <option value="pl">Polish</option>
+                                <option value="pt">Portuguese</option>
+                                <option value="fa">Persian</option>
+                                <option value="sr">Serbian</option>
+                                <option value="sd">Sindhi</option>
+                                <option value="es">Spanish</option>
+                                <option value="sw">Swedish</option>
+                                <option value="th">Thai</option>
+                                <option value="cy">Welsh</option>
+                                <option value="xh">xhosa</option>
+                                <option value="zu">Zulu</option>
+                                <option value="sm">Samoan</option>
+                                <option value="ro">Romanian</option>
+                                <option value="mn">Mangolian</option>
+                                <option value="ga">Irish</option>
+                                <option value="id">idonesian</option>
+                                <option value="is">Icelandic</option>
+                                <option value="fi">Finnish</option>
+                                <option value="tl">filipino</option>
+                                <option value="da">Danish</option>
+                                <option value="nl">Dutch</option>
+                                <option value="bg">Bulgarian</option>
+                            </select>
+                        </div>
+                        <div id="row">
+                        <button type="submit" class="btn-primary mb-2" id="translate">Translate text</button>
+                        
+                    </div>
+                    </form>
+                    <!-- Translated text returned by the Translate API is rendered here. -->
+                </div>
+                <div id="col">
+                    <form>
+                        <div class="form-group" id="translator-text-response">
+                            <label for="translation-result"><strong>Translated text:</strong></label>
+                            <textarea class="form-control" id="translation-result" rows="8" placeholder="Translation..." readonly>{{ translation_result }}</textarea>
+                        </div>
+                        <button type="submit" onclick="myFunction()" class="btn-primary">
+                            <span> COPY </span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+            </div>
+        </main>               
+    </div>
+
+    
+</body>
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/Translate.js') }}"></script>
+
+</html>

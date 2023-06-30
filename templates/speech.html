@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Speech to text</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='stylesheets/speech.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+
+    <div class="header" id="myHeader">
+      <span class="icon-name"><strong>PicTrans</strong></span>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="sidenav-content">
+            <a href="/">Home</a>
+            <a href="/Detect">Text Extraction & Object Detection Tool</a>
+            <a href="/SpeechREC">Speech Recognition Tool</a>
+            <a href="/Translate">Text Translation Tool</a>
+          </div>
+      </div>
+    <span style="font-size:30px; cursor:pointer; float: right;" onclick="openNav()">&#9776;</span>
+  </div>
+
+    <div class="Middle">
+      <main>
+        <h1 class="cover-heading">Speech to Text Tool</h1>
+        <p class="lead">The text extractor will allow you to extract text from any image. 
+            You need upload an image and the tool will pull text from the image. 
+            Once extracted, you can copy to your clipboard with one click.</p>
+          
+          <div class="container">
+            <div class="container-box1">
+              <button id="start_button">
+              <img id="start_img" src="static/mic.png" alt="Start"></button>
+                            
+            <div id="info"></div>
+              
+            <div class="row col-12 col-md-8 col-lg-6 p-0 m-0">
+              <select id="select_language"></select>
+              <select id="select_dialect"></select>
+              </div>
+
+              <div>
+                <button type="submit" onclick="copyToClipboard()" class="button2 button-style">
+                    <span style="position: relative; left: 0;float: left;position: static;" class="mr-2">
+                        <i class="fa fa-copy" style="font-size:24px"></i> 
+                    </span>
+                    <span style="font-size: 20px;"> COPY </span>
+                </button>            
+              </div>
+            </div>
+              
+              <div id="results">
+                <span id="final_span" class="final"></span>
+                <span id="interim_span" class="interim"></span>
+                <p>
+              </div>
+          </div>
+          
+      </main>
+      </div>
+
+      <div class="footer_1">
+        <h1>Textomatify</h1>
+      </div>
+      
+      <div class="footer_2">
+        <div class="footer-container">
+      
+          <div class="footer-grid">
+            <p>Connect with us</p>
+            <ul>
+              <li><i class="fab fa-facebook-f"></i></li>
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-linkedin-in"></i></li>
+              <li><i class="fab fa-pinterest"></i></li>
+           </ul>
+          </div>
+          
+          <div class="footer-grid">
+            <h4> Company </h4>
+            <p><a href="/" style="color: #4889c7; text-decoration: none;">Home</a></p>
+            <p> Contact US </p>
+            <p> About </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer_3">
+          &copy;
+          2021-2022
+      </div>      
+      
+      <script type="text/javascript" src="{{ url_for('static', filename='scripts/speech.js') }}"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='scripts/languages.js') }}"></script>
+      {% block scripts %}
+      {% endblock scripts %}
+    </body>
+</html>

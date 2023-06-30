@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='stylesheets/Home.css') }}" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="header" id="myHeader">
+
+    <span class="icon-name">PicTrans</span>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidenav-content">
+          <a href="/">Home</a>
+          <a href="/Detect">Text Extraction & Object Detection Tool</a>
+          <a href="/SpeechREC">Speech Recognition Tool</a>
+          <a href="/Translate">Text Translation Tool</a>
+        </div>
+    </div>
+    <span style="font-size:30px; cursor:pointer; float: right;" onclick="openNav()">&#9776;</span>
+  </div>
+    
+<div class="Middle">
+<div class="grid-container">
+
+<!--<div class="grid">
+    <h2 style="text-align: center; font-variant: small-caps;">Text Extraction Tool</h2>
+    <h3 style="text-align: center;">Extract Text From Image</h3>
+    <p style="text-align: justify;">The text extractor will allow you to extract text from any image. You need upload an image and the tool will pull text from the image. Once extracted, you can copy to your clipboard with one click.</p>
+    <a href="/Extract_Text" class="button1">Extract Text</a>
+</div>-->
+
+<div class="grid">
+  <h2 style="text-align: center; font-variant: small-caps;">Object Detection & Text Extraction Tool</h2>
+  <h3 style="text-align: center;">Extract Text From Image and detect the object</h3>
+  <p style="text-align: justify;">The text extractor will allow you to extract text from any image. You need upload an image and the tool will pull text from the image. Once extracted, you can copy to your clipboard with one click.</p>
+  <a href="/Detect" class="button1">Detect & Extract</a>
+</div>
+
+<div class="grid">
+    <h2 style="text-align: center; font-variant: small-caps;">Speech Recognition Tool</h2>
+    <h3 style="text-align: center;">Speech To Text Conversion</h3>
+    <p style="text-align: justify;">The speech recognition will allow you to convert speech from text. You need press the microphone button and start speaking. Once you get trascribed text, you can copy this text with one click.</p>
+    <a href="/SpeechREC" class="button1">Convert Text</a>
+</div>
+    
+<div class="grid">
+    <h2 style="text-align: center; font-variant: small-caps;">Text Translation Tool</h2>
+    <h3 style="text-align: center;">Text Translation</h3>
+    <p style="text-align: justify;">The text translator will allow you to translate text. You may enter text and the tool will translate text to another language. Once translated, you can copy text to your clipboard with one click.</p>
+    <a href="/Translate" class="button1">Translate Text</a>
+</div> 
+</div>
+</div>
+
+
+<script>
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("myHeader").style.top = "0";
+  } else {
+    document.getElementById("myHeader").style.top = "-90px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+   
+</body>
+</html> 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="175px" height="121px" viewBox="0 0 175 121" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Visual</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3023AE" offset="0%"></stop>
+            <stop stop-color="#C86DD7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="workbench-landing" transform="translate(-603.000000, -191.000000)">
+            <g id="Visual" transform="translate(603.000000, 191.000000)">
+                <path d="M150.5,16.5 L166.311388,0.688611699" id="Line-20" stroke="#EF2596" stroke-linecap="square"></path>
+                <path d="M44.5,83.5 L55.6803399,72.3196601" id="Line-21" stroke="#7ED321" stroke-linecap="square"></path>
+                <path d="M56.5,54.5 L62.0226805,48.9773195" id="Line-22" stroke="#979797" stroke-linecap="square"></path>
+                <path d="M146,76.1421356 L160.142136,62" id="Line-23" stroke="#C5C5C5" stroke-linecap="square"></path>
+                <rect id="Rectangle-40" stroke="#D8D8D8" x="0.5" y="90.5" width="14" height="14"></rect>
+                <rect id="Rectangle-40" stroke="#D8D8D8" x="0" y="0" width="14" height="14"></rect>
+                <rect id="Rectangle-40-Copy" stroke="#D8D8D8" x="160.5" y="30.5" width="14" height="14"></rect>
+                <path d="M88.5,35.5 L88.5,108.5 L145.5,108.5 L145.5,45.6296952 L134.493202,45.6296952 L134.493202,35.5 L88.5,35.5 Z" id="Rectangle-39" stroke="#979797"></path>
+                <polygon id="Rectangle-39-Copy" fill="url(#linearGradient-1)" points="78 76 103.117056 76 103.117056 81.4755109 109 81.4755109 109 116 78 116"></polygon>
+                <circle id="Oval-18" stroke="#DDDDDD" cx="167.5" cy="116.5" r="3.5"></circle>
+                <circle id="Oval-18-Copy" stroke="#DDDDDD" cx="161" cy="100" r="7"></circle>
+                <circle id="Oval-18-Copy-2" stroke="#DDDDDD" cx="41" cy="60" r="7"></circle>
+                <circle id="Oval-18-Copy" stroke="#DDDDDD" cx="90" cy="10" r="9"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

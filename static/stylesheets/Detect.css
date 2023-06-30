@@ -1,0 +1,81 @@
+.header {
+    background: #f1f5fa;
+    color: #0066cc;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+}
+
+.container1{
+    display: block;
+  }   
+
+
+.container-box2 {
+    height: 370px;
+    width: 100%;
+}
+
+.cover-heading {
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.icon-name {
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    font-size: 40px; 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #dae6f1 0%, #99ccff 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+}
+
+.sidenav-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sidenav a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #0400ff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #4a97e4;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    margin-left: 50px;
+}
